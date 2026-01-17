@@ -119,7 +119,7 @@ This approach mimics human decision-making and offers strong robustness against 
 
 ![Figure 7](figures/figure_7.png)
 
-*Figure 7: Resultant car body displacement (CBD) and suspension travel of (a) Passive Suspension, and Active Suspension systems using (b) LQR, (c) Fuzzy Logic, and (d) PID controllers.*
+*Figure 2: Resultant car body displacement (CBD) and suspension travel of (a) Passive Suspension, and Active Suspension systems using (b) LQR, (c) Fuzzy Logic, and (d) PID controllers.*
 
 ### Key Observations
 
