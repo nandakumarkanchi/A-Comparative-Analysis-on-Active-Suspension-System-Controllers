@@ -1,0 +1,69 @@
+[System]
+Name='Active suspension fuzzy rule'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=25
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Car_body_displacement'
+Range=[-1 1]
+NumMFs=5
+MF1='NH':'trapmf',[-1.375 -1.042 -0.9583 -0.625]
+MF2='NL':'trapmf',[-0.875 -0.5417 -0.4583 -0.125]
+MF3='Z':'trapmf',[-0.375 -0.04167 0.04167 0.375]
+MF4='PL':'trapmf',[0.125 0.4583 0.5417 0.875]
+MF5='PH':'trapmf',[0.625 0.9583 1.042 1.375]
+
+[Input2]
+Name='Car_body_velocity'
+Range=[-5 5]
+NumMFs=5
+MF1='NH':'trapmf',[-6.875 -5.208 -4.792 -3.125]
+MF2='NL':'trapmf',[-4.375 -2.708 -2.292 -0.625]
+MF3='Z':'trapmf',[-1.875 -0.2083 0.2083 1.875]
+MF4='PL':'trapmf',[0.625 2.292 2.708 4.375]
+MF5='PH':'trapmf',[3.125 4.792 5.208 6.875]
+
+[Output1]
+Name='Actuator_force'
+Range=[-2500 2500]
+NumMFs=5
+MF1='NH':'trapmf',[-3438 -2604 -2396 -1562]
+MF2='NL':'trapmf',[-2188 -1354 -1146 -312.5]
+MF3='Z':'trapmf',[-937.5 -104.2 104.2 937.5]
+MF4='PL':'trapmf',[312.5 1146 1354 2188]
+MF5='PH':'trapmf',[1562 2396 2604 3438]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 1 (1) : 1
+1 3, 2 (1) : 1
+1 4, 2 (1) : 1
+1 5, 3 (1) : 1
+2 1, 1 (1) : 1
+2 2, 2 (1) : 1
+2 3, 2 (1) : 1
+2 4, 3 (1) : 1
+2 5, 4 (1) : 1
+3 1, 2 (1) : 1
+3 2, 2 (1) : 1
+3 3, 3 (1) : 1
+3 4, 4 (1) : 1
+3 5, 4 (1) : 1
+4 1, 2 (1) : 1
+4 2, 3 (1) : 1
+4 3, 4 (1) : 1
+4 4, 4 (1) : 1
+4 5, 5 (1) : 1
+5 1, 3 (1) : 1
+5 2, 4 (1) : 1
+5 3, 4 (1) : 1
+5 4, 5 (1) : 1
+5 5, 5 (1) : 1
